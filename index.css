@@ -1,0 +1,566 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff7ed;
+  font-family: "Inter", sans-serif;
+  color: #161616;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+.link-button {
+  font-family: inherit;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 24px;
+}
+
+header .site-logo {
+  color: black;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+header nav {
+  display: flex;
+  gap: 12px;
+}
+
+header a {
+  color: #4d4d4d;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+header a:hover,
+header a.active {
+  color: #161616;
+  background-color: rgba(255, 140, 56, 0.12);
+}
+
+main {
+  margin-bottom: 84px;
+  padding: 0 24px;
+}
+
+footer {
+  background-color: #161616;
+  color: #aaaaaa;
+  height: 74px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 500;
+}
+
+.link-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  padding: 0.9rem 1.4rem;
+  color: initial;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    transform 0.1s ease-in-out,
+    background-color 0.2s ease;
+  background-color: #ffead0;
+  color: #161616;
+}
+
+.link-button.primary {
+  background-color: #ff8c38;
+  color: white;
+}
+
+.link-button:hover {
+  transform: translate(1px, 1px);
+}
+
+.back-button {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  margin-block: 24px;
+}
+
+.back-button span:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.page-heading .eyebrow {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ff8c38;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.page-heading h1 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  line-height: 1.05;
+}
+
+.page-subtitle {
+  margin-top: 16px;
+  max-width: 680px;
+  line-height: 1.8;
+  color: #4d4d4d;
+}
+
+.card {
+  background-color: white;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 18px 50px rgba(22, 22, 22, 0.08);
+}
+
+.stats-grid,
+.income-grid,
+.section-group,
+.review-grid,
+.van-list {
+  display: grid;
+  gap: 24px;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  margin-bottom: 34px;
+}
+
+.stat-card p {
+  color: #6d6d6d;
+  margin-bottom: 12px;
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+}
+
+.section-group {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.detail-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.detail-list li {
+  padding-left: 18px;
+  position: relative;
+  color: #4d4d4d;
+}
+
+.detail-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff8c38;
+}
+
+.host-vans-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.host-van-single {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 18px;
+  align-items: center;
+  background-color: #fbf1e6;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.host-van-single img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.host-van-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.host-van-info p {
+  color: #6d6d6d;
+}
+
+.income-grid {
+  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  margin-bottom: 24px;
+}
+
+.income-card p {
+  color: #6d6d6d;
+  margin-bottom: 12px;
+}
+
+.income-card h3 {
+  font-size: 1.8rem;
+}
+
+.income-table {
+  display: grid;
+  gap: 12px;
+}
+
+.income-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background-color: #fbf1e6;
+  border-radius: 14px;
+}
+
+.income-row strong {
+  font-weight: 700;
+}
+
+.review-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.review-card {
+  background-color: #fbf1e6;
+  padding: 22px;
+  border-radius: 18px;
+}
+
+.review-card h3 {
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  color: #4d4d4d;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.review-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6d6d6d;
+  font-size: 0.95rem;
+}
+
+.review-stars {
+  color: #ff8c38;
+  font-size: 1rem;
+}
+
+.van-list-container {
+  padding-inline: 0;
+}
+
+.van-list-container h1 {
+  margin-top: 15px;
+  font-size: 2rem;
+}
+
+.van-list-container p {
+  color: #6d6d6d;
+  margin-bottom: 24px;
+}
+
+.van-list-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.van-list {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 34px;
+}
+
+.van-tile {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 18px 50px rgba(22, 22, 22, 0.08);
+}
+
+.van-tile img {
+  width: 100%;
+  object-fit: cover;
+  height: 240px;
+}
+
+.van-info {
+  padding: 22px;
+}
+
+.van-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.van-info p {
+  color: #6d6d6d;
+  line-height: 1.6;
+}
+
+.van-price {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.van-detail-container {
+  padding-inline: 0;
+}
+
+.van-detail {
+  display: grid;
+  gap: 28px;
+  padding: 26px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 18px 50px rgba(22, 22, 22, 0.08);
+}
+
+.van-detail img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.van-detail-top {
+  display: grid;
+  gap: 24px;
+}
+
+.van-detail-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.van-detail-summary h2 {
+  font-size: 2rem;
+}
+
+.van-detail-summary .van-price {
+  font-size: 1.25rem;
+}
+
+.van-detail-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+}
+
+.feature-card {
+  background-color: #fbf1e6;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.feature-card h4 {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #6d6d6d;
+}
+
+.feature-card p {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.van-detail .link-button.primary {
+  width: fit-content;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+
+.host-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.host-nav a {
+  color: #4d4d4d;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.host-nav a:hover,
+.host-nav a.active {
+  background-color: #ffead0;
+  color: #161616;
+}
+
+.host-van-detail-layout-container {
+  background-color: white;
+  padding: 24px;
+  margin: 30px 0;
+  border-radius: 20px;
+  box-shadow: 0 18px 50px rgba(22, 22, 22, 0.08);
+}
+
+.host-van-detail {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.host-van-detail img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.host-van-detail-info-text > h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.host-van-detail-info-text > h4 {
+  font-size: 1rem;
+  margin: 6px 0 0;
+  color: #6d6d6d;
+}
+
+.host-van-detail-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-block: 24px;
+}
+
+.host-van-detail-info {
+  display: grid;
+  gap: 14px;
+}
+
+.host-van-detail-info h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.host-van-detail-info h4 span {
+  font-weight: 500;
+}
+
+.host-van-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.host-van-price span {
+  font-size: 1rem;
+  color: #6d6d6d;
+  margin-left: 6px;
+}
+
+.host-van-detail-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.not-found-container {
+  padding-inline: 26px;
+}
+
+.not-found-container .link-button {
+  width: 100%;
+  background-color: #161616;
+  color: white;
+}
+
+.about-page-container {
+  display: grid;
+  gap: 32px;
+  padding: 24px 0 40px;
+}
+
+.about-page-cta {
+  display: grid;
+  gap: 20px;
+}
